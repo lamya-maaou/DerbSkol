@@ -1,4 +1,4 @@
-# DerbSchool - Application de Gestion Scolaire
+# DerbSkol - Application de Gestion Scolaire
 
 Application web de gestion scolaire développée avec Django (backend) et Flutter (frontend mobile), permettant une gestion complète des étudiants, des factures et des paiements.
 
