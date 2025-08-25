@@ -4,10 +4,10 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
-from django.http import JsonResponse
+from django.shortcuts import render
 
 def home(request):
-    return JsonResponse({"message": "Bienvenue sur l'API DerbSkoL 🚀"})
+    return render(request, 'dashboard.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

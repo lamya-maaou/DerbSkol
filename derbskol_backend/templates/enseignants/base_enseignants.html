@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Gestion des Enseignants - DerbSkoL{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="mb-6">
+        <h1 class="text-2xl font-bold text-gray-800">Gestion des Enseignants</h1>
+        <nav class="mt-4">
+            <ul class="flex space-x-4 border-b">
+                <li>
+                    <a href="{% url 'enseignants_liste' %}" 
+                       class="px-4 py-2 {% if request.resolver_match.url_name == 'enseignants_liste' %}border-b-2 border-blue-500 text-blue-600 font-medium{% else %}text-gray-600 hover:text-blue-600{% endif %}">
+                        Liste des Enseignants
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'enseignants_ajouter' %}" 
+                       class="px-4 py-2 {% if request.resolver_match.url_name == 'enseignants_ajouter' %}border-b-2 border-blue-500 text-blue-600 font-medium{% else %}text-gray-600 hover:text-blue-600{% endif %}">
+                        Ajouter un Enseignant
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    {% block enseignants_content %}
+    {% endblock %}
+</div>
+{% endblock %}
